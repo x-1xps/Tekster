@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trias fātālis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+    /*reset*/
+    @charset "utf-8";
+/***
+    The new CSS reset - version 1.8.5 (last updated 14.6.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --tekststørrelse: 15.5px
+}
+body {
+  --margen: 2px;
+  margin-top: var(--tekststørrelse);
+  font: var(--tekststørrelse)/1.2 "EB Garamond", serif;
+  text-align: justify;
+  background-color: black;
+  color: white;
+  margin-left: var(--margen);
+  margin-right: var(--margen);
+  margin-bottom: 100vh;
+}
+p {
+  --margen: 30px;
+  margin-top: var(--margen);
+  margin-bottom: var(--margen);
+}
+.kursiv {
+  font-style: italic;
+}
+#to {
+  line-height: 1.1;
+}
+#tre {
+    --tekststørrelse: 17px;
+    --spacing: 8px;
+    --linjehøjde: 1.5;
+    display: table-cell;
+    height: 100vh;
+    width: 100vw;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    font-size: var(--tekststørrelse);
+    line-height: var(--linjehøjde);
+    transform: translateY(-var(--spacing));
+}
+#spacing {
+    line-height: calc((var(--linjehøjde)*var(--tekststørrelse)) + (2*(var(--spacing))));
+}
+</style>
+</head>
+<body>
+  <p id="1">
+    [...] Og pludselig blev det klart for mig at hun tilhørte den gruppe af mennesker som i rådvildhed affødt af total mangel på selverkendelse klamrede sig febrilskt til de i-øjeblikket-gældende <span class="kursiv">trends</span>, hvad end der var tale om floskler, diller eller regulære traditioner; at alt hvad hun gjorde og sagde tog udgangspunkt i et meningsløst framework udgjort af <span class="kursiv">det normale</span>, hvad der ikke burde være mere end en statistisk iagttagelse af et ontologisk tilfælde, men som blev et selvforstærkende fænomen så meget desto mere som der fandtes folk der dyrkede det som en religion [...]
+</p>
+<p id="to">
+..Men hvor meget jeg end forsøgte at forholde mig rationel, var min evne til almen begejstring betinget af sansningen af hendes krop og den bløde hud omkring hendes bryst hvorfra hendes varme ville strømme let til ˈmin og lægge sig blidt omkring min verden som da ville florere i myldrende energi, og jeg ville fyldes af indtrængende tilskyndelse til at gribe så meget af denne, jeg kunne, og jeg elskede hende for det
+  </p>
+<p id="tre">
+    one more day<br>of<br><span id="spacing">searching</span>
+</p>
+</body>
+</html>
